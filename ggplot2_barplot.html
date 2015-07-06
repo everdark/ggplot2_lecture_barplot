@@ -370,7 +370,7 @@ diamonds_precounted</pre>
 </article></slide><slide class=''><hgroup><h2>exercise: possible solution 1 (basic)</h2></hgroup><article  id="exercise-possible-solution-1-basic" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>librart(ggplot2)
-src_path &lt;- &quot;/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data&quot;
+src_path &lt;- &quot;./data&quot;
 citynames &lt;- unique(gsub(&quot;_.*&quot;, &#39;&#39;, dir(src_path)))
 citynames &lt;- citynames[1:4] # take english version only
 dat &lt;- list()
@@ -399,7 +399,7 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat=&quot;identity&quot
 
 <pre class = 'prettyprint lang-r'>library(ggplot2)
 library(data.table) # need 1.9.5 =&gt; devtools:install_github(&quot;Rdatatable/data.table&quot;, build_vignettes=FALSE)
-src_path &lt;- &quot;/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data&quot;
+src_path &lt;- &quot;./data&quot;
 citynames &lt;- unique(gsub(&quot;_.*&quot;, &#39;&#39;, dir(src_path)))
 citynames &lt;- citynames[1:4] # take english version only
 dat &lt;- list()
@@ -445,17 +445,7 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat=&quot;identity&quot
 ## 17:     F Very Good 2164 0.22678684
 ## 18:     F      Good  909 0.09526305
 ## 19:     H      Good  702 0.08453757
-## 20:     D      Good  662 0.09771218</pre>
-
-<pre >##    
-##     Fair Good Very Good Premium Ideal
-##   D  163  662      1513    1603  2834
-##   E  224  933      2400    2337  3903
-##   F  312  909      2164    2331  3826
-##   G  314  871      2299    2924  4884
-##   H  303  702      1824    2360  3115
-##   I  175  522      1204    1428  2093
-##   J  119  307       678     808   896</pre></div>
+## 20:     D      Good  662 0.09771218</pre></div>
 
 </article></slide><slide class=''><hgroup><h2>possible solution 1 </h2><h3> just do it: <code>aggregate</code> and <code>lapply</code></h3></hgroup><article  id="possible-solution-1-just-do-it-aggregate-and-lapply" class="smaller ">
 

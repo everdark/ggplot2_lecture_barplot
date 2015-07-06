@@ -360,7 +360,7 @@ ggplot(data=diamonds[diamonds$cut %in% c("Fair", "Ideal"),], aes(x=price, y=..de
 
 ```r
 librart(ggplot2)
-src_path <- "/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data"
+src_path <- "./data"
 citynames <- unique(gsub("_.*", '', dir(src_path)))
 citynames <- citynames[1:4] # take english version only
 dat <- list()
@@ -393,7 +393,7 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat="identity")
 ```r
 library(ggplot2)
 library(data.table) # need 1.9.5 => devtools:install_github("Rdatatable/data.table", build_vignettes=FALSE)
-src_path <- "/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data"
+src_path <- "./data"
 citynames <- unique(gsub("_.*", '', dir(src_path)))
 citynames <- citynames[1:4] # take english version only
 dat <- list()
@@ -446,19 +446,6 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat="identity")
 ## 18:     F      Good  909 0.09526305
 ## 19:     H      Good  702 0.08453757
 ## 20:     D      Good  662 0.09771218
-```
-
-
-```
-##    
-##     Fair Good Very Good Premium Ideal
-##   D  163  662      1513    1603  2834
-##   E  224  933      2400    2337  3903
-##   F  312  909      2164    2331  3826
-##   G  314  871      2299    2924  4884
-##   H  303  702      1824    2360  3115
-##   I  175  522      1204    1428  2093
-##   J  119  307       678     808   896
 ```
 </div>
 
@@ -599,13 +586,13 @@ head(DFSQL)
 
 ## finally, proportional stacking bar
 
-<img src="ggplot2_barplot_files/figure-html/unnamed-chunk-41-1.png" title="" alt="" width="720" />
+<img src="ggplot2_barplot_files/figure-html/unnamed-chunk-40-1.png" title="" alt="" width="720" />
 
 
 <div class="columns-2">
 ## exercise!
 
-<img src="ggplot2_barplot_files/figure-html/unnamed-chunk-42-1.png" title="" alt="" width="480" /><img src="ggplot2_barplot_files/figure-html/unnamed-chunk-42-2.png" title="" alt="" width="480" />
+<img src="ggplot2_barplot_files/figure-html/unnamed-chunk-41-1.png" title="" alt="" width="480" /><img src="ggplot2_barplot_files/figure-html/unnamed-chunk-41-2.png" title="" alt="" width="480" />
 </div>
 
 
