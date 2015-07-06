@@ -232,7 +232,7 @@ ggplot(data=diamonds[diamonds$cut %in% c("Fair", "Ideal"),], aes(x=price, y=..de
 + remember to check variable type in advanced
 + the forth plot is rather difficult
 ```{r, echo=FALSE}
-src_path <- "/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data"
+src_path <- "./data"
 citynames <- unique(gsub("_.*", '', dir(src_path)))
 citynames <- citynames[1:4] # take english version only
 dat <- list()
@@ -285,7 +285,7 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat="identity")
 
 ```{r, eval=FALSE}
 librart(ggplot2)
-src_path <- "/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data"
+src_path <- "./data"
 citynames <- unique(gsub("_.*", '', dir(src_path)))
 citynames <- citynames[1:4] # take english version only
 dat <- list()
@@ -317,7 +317,7 @@ ggplot(dd, aes(x=city, y=hour, fill=status)) + geom_bar(stat="identity")
 ```{r, eval=FALSE}
 library(ggplot2)
 library(data.table) # need 1.9.5 => devtools:install_github("Rdatatable/data.table", build_vignettes=FALSE)
-src_path <- "/Users/kylechung/Dropbox/DSC2015/ggplot_lecture/data"
+src_path <- "./data"
 citynames <- unique(gsub("_.*", '', dir(src_path)))
 citynames <- citynames[1:4] # take english version only
 dat <- list()
@@ -361,10 +361,6 @@ diamondsDT <- as.data.table(diamonds)
 diamondsDT <- diamondsDT[, list(cnt=.N), by="color,cut"]
 diamondsDT <- diamondsDT[, pct:=cnt / sum(cnt), by="color"]
 head(diamondsDT, 20)
-```
-
-```{r, echo=FALSE}
-table(diamonds$color, diamonds$cut)
 ```
 </div>
 
